@@ -15,8 +15,8 @@
                 );
                 
                 foreach ($urls as $name => $url) {
-                    print '<li '.(($currentPage === $name) ? ' class="active" ': '').
-                        '><a href="'.$url.'">'.$name.'</a></li>';
+                    print '<li  class="nav-item"'.(($currentPage === $name) ? ' class="active" ': '').
+                        '><a  class="nav-link href="'.$url.'">'.$name.'</a></li>';
                 }
             ?>
         </ul>
