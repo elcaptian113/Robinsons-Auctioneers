@@ -1,12 +1,12 @@
 <?php
 
 $host = 'localhost';
-$port = 8900;
+//$port = 8900;
 $user = 'root';
 $pass = '';
 $dbname = "auction_house";
 
-$conn = mysqli_connect($host,$user,$pass,$dbname,$port);
+$conn = mysqli_connect($host,$user,$pass,$dbname);
 
 if(!$conn){
     die("Database Connection Failed " . mysqli_connect_error());
