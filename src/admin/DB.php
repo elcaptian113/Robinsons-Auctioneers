@@ -1,12 +1,12 @@
 <?php
 
-$host = 'localhost';
-//$port = 8900;
-$user = 'root';
-$pass = '';
-$dbname = "auction_house";
+$host = 'auctionhouse-db.mysql.database.azure.com';
+$port = 3306;
+$user = 'auctionhouse_user';
+$pass = 'auction12345';
+$dbname = "auctionhouse_db";
 
-$conn = mysqli_connect($host,$user,$pass,$dbname);
+$conn = mysqli_connect($host,$user,$pass,$dbname,$port);
 
 if(!$conn){
     die("Database Connection Failed " . mysqli_connect_error());
