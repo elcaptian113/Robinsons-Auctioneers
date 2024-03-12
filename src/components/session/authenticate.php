@@ -4,7 +4,7 @@ session_start();
 
 if(isset($_POST['username'])&&!empty($_POST['username'])){
 
-    require '../../src/admin/DB.php';
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/src/admin/DB.php');
 
     $hash = $_POST['password'] . $salt1 . $salt2;
     $hashpassword = md5($hash);

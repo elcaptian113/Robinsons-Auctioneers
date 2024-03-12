@@ -8,5 +8,5 @@
 </script>
 <body>
   <h1>Home Page</h1>
-
+  <a href="../../src/session/logout.php">logout</a>
 </body>
