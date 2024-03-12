@@ -19,10 +19,10 @@ if(isset($_POST['username'])&&!empty($_POST['username'])){
         $_SESSION['user_type'] = $result[7];
         $_SESSION['name'] = $result[2];
         if($_SESSION['user_type'] == 'user'){
-            echo '<script>alert("Welcome'.$_SESSION['user'].'! /nLogin Successful!"); window.location = "../../src/pages/home.php";</script>';
+            echo '<script>alert("Welcome '.$_SESSION['user'].'! Login Successful!"); window.location = "../../src/pages/home.php";</script>';
         }
         else if($_SESSION['user_type'] == 'admin' || $_SESSION['user_type'] == 'mstr'){
-            echo '<script>alert("Welcome'.$_SESSION['user'].'! /nAdmin Login Successful!"); window.location = "../../src/pages/homeAdmin.php";</script>';
+            echo '<script>alert("Welcome '.$_SESSION['user'].'! Admin Login Successful!"); window.location = "../../src/pages/homeAdmin.php";</script>';
         }
         
         
