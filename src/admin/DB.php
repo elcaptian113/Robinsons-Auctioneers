@@ -7,7 +7,7 @@ $user = 'auctionhouse_user';
 $pass = 'auction12345';
 $dbname = 'auctionhouse_db';
 
-$conn = mysqli_real_connect($con,$host,$user,$pass,$dbname,$port);
+$conn = mysqli_connect($host,$user,$pass,$dbname,$port);
 
 if(!$conn){
     die("Database Connection Failed " . mysqli_connect_error());

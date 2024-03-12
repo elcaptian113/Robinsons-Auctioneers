@@ -4,7 +4,7 @@ session_start();
 session_unset(); 
 session_destroy();
 
-header("Location: ../../index.php");
+echo '<script>alert("Goodbye '.$_SESSION['user'].'! /nLogout Successful!"); window.location = "../../index.php";</script>';
 exit();
 
 ?>
