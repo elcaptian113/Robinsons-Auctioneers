@@ -8,5 +8,5 @@
 </script>
 <body>
   <h1>History Page</h1>
-
+  <p>table of users won bids</p>
 </body>

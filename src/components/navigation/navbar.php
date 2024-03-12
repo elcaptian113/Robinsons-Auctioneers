@@ -20,6 +20,12 @@
                 }
             ?>
         </ul>
+        <form class="navbar-form navbar-right">
+					<div class="form-group">
+						<label id="user" class=" col-form-label"style="color: white;">Logged in as: <?php echo $_SESSION['user']; ?>,</label>
+					</div>
+					<a class="btn btn-default" href="../../src/components/session/logout.php">Log Out</a>
+				</form>
     </div>
   </div>
 </nav>
