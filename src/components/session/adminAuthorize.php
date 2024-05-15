@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])){
     die();
 }
 
-if($_SESSION['user_type'] !== 'admin' || $_SESSION['user_type'] !== 'mstr'){
+if($_SESSION['user_type'] !== 'mstr'){
     header("Location: ../../src/pages/home.php");
 }
 

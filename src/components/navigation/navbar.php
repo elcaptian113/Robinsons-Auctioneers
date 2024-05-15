@@ -5,27 +5,28 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
             <?php
             
                 $urls = array(
                     'Home' => '../../src/pages/home.php',
                     'History' => '../../src/pages/history.php',
+                    'Live Auction' => '../../src/pages/liveauction.php',
                     
                 );
                 
                 foreach ($urls as $name => $url) {
-                    print '<li  class="nav-item"'.(($currentPage === $name) ? ' class="active" ': '').
-                        '><a  class="nav-link href="'.$url.'">'.$name.'</a></li>';
+                    print '<li class="nav-item">
+                        <a  '.(($currentPage === $name) ? ' class="nav-link active" ': 'class="nav-link"').' href="'.$url.'">'.$name.'</a></li>';
                 }
             ?>
         </ul>
-        <form class="navbar-form navbar-right">
+        <form class="d-flex">
 					<div class="form-group">
-						<label id="user" class=" col-form-label"style="color: white;">Logged in as: <?php echo $_SESSION['user']; ?>,</label>
+						<label id="user" class=" col-form-label"style="color: Black;">Logged in as: <?php echo $_SESSION['user']; ?></label>
+            <a class="btn btn-outline-danger" href="../../src/components/session/logout.php">Log Out</a>
 					</div>
-					<a class="btn btn-default" href="../../src/components/session/logout.php">Log Out</a>
-				</form>
+		  </form>
     </div>
   </div>
 </nav>

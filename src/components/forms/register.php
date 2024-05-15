@@ -26,13 +26,35 @@
               </div>
               <div class="col-12">
                 <label for="confirm_password" class="form-label">Confirm Password <span class="text-danger">*</span></label>
-                <input type="password" class="form-control" name="confirm_password" id="confirm_password" value="" required>
+                <input type="password" class="form-control" name="confirm_password" id="confirm_password" value="" onkeyup="checkPasswordMatch();" required>
               </div>
+              <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
               <input type="hidden" id="user_type" name="user_type" value="user">
               <div class="col-12">
                 <div class="d-grid">
-                  <button class="btn btn-lg btn-primary" type="submit">Sign up</button>
+                  <button class="btn btn-lg btn-primary" type="submit" disabled>Sign up</button>
                 </div>
               </div>
             </div>
         </form>
+
+        <script type="text/javascript"><!--
+          function checkPasswordMatch() {
+              var password = $("#password").val();
+              var confirmPassword = $("#confirm_password").val();
+
+              if (password.trim() != confirmPassword.trim()){
+                $("#divCheckPasswordMatch").html("Passwords do not match!");
+                $(':input[type="submit"]').prop('disabled', true);
+              }
+              else if (password.trim() == '' || confirmPassword.trim() == ''){
+                $("#divCheckPasswordMatch").html("");
+                $(':input[type="submit"]').prop('disabled', true);
+              }
+              else{
+                $("#divCheckPasswordMatch").html("Passwords match.");
+                $(':input[type="submit"]').prop('disabled', false);
+              }
+                  
+          }
+        </script>

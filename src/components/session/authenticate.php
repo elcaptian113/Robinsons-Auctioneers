@@ -13,11 +13,12 @@ if(isset($_POST['username'])&&!empty($_POST['username'])){
     $data = mysqli_query($conn,$sql); 
     $login_check = mysqli_num_rows($data);
     $result = mysqli_fetch_row($data);
-    echo $result[1]. " " . $result[6];
+    //echo $result[1]. " " . $result[6];
     if($login_check > 0){ 
         $_SESSION['user'] = $_POST['username'];
         $_SESSION['user_type'] = $result[7];
         $_SESSION['name'] = $result[2];
+        $_SESSION['userid'] = $result[0];
         if($_SESSION['user_type'] == 'user'){
             echo '<script>alert("Welcome '.$_SESSION['user'].'! Login Successful!"); window.location = "../../src/pages/home.php";</script>';
         }

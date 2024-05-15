@@ -43,7 +43,7 @@ if (isset($_POST['username'])){
               </div>
             </div>
           </div>
-          <?php require_once($_SERVER['DOCUMENT_ROOT'] . 'src/components/forms/login.php'); ?>
+          <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/src/components/forms/register.php'); ?>
           <div class="row">
             <div class="col-12">
               <hr class="mt-5 mb-4 border-secondary-subtle">
