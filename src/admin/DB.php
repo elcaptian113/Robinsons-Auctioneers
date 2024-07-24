@@ -1,12 +1,6 @@
 <?php
 
 $con = mysqli_init();
-//production credentials
-//$host = 'auctionhouse-db.mysql.database.azure.com';
-//$port = 3306;
-//$user = 'auctionhouse_user';
-//$pass = 'auction12345';
-//$dbname = 'auctionhouse_db';
 
 $host = 'localhost';
 $port = 3306;
